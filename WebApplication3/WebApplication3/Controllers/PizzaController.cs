@@ -37,10 +37,10 @@ namespace WebApplication3.Controllers
         {
             try
             {
-                pizza.Pizza.Pate = FakeDB.Instance.PatesDisponibles.Where(pa => pa.Id == pizza.PateId).FirstOrDefault();
-                pizza.Pizza.Ingredients = FakeDB.Instance.IngredientsDisponibles.Where(i => pizza.IngredientId.Contains(i.Id)).ToList();
+                Pizza pizza1 = new Pizza();
 
-                FakeDB.Instance.Pizzas.Add(pizza.Pizza);
+                pizza1.Pate = FakeDB.Instance.PatesDisponibles.Where(pa => pa.Id == pizza.PateId).FirstOrDefault();
+                pizza1.Ingredients = FakeDB.Instance.IngredientsDisponibles.Where(i => pizza.IngredientId.Contains(i.Id)).ToList();
 
                 return RedirectToAction("Index");
             }
