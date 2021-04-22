@@ -1,0 +1,28 @@
+﻿@model WebApplication3.Models.PizzaViewModel
+
+<div>
+    <h4>PizzaViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PizzaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PizzaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PateId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PateId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
